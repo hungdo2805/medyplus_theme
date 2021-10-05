@@ -1,0 +1,156 @@
+.hero{
+    .carousel{
+        &-item{
+            padding-top: 600px;
+            background-size: auto 100%;
+        }
+        &-content{
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%, -50%);
+            text-align: left;
+        }
+        &-heading{
+            font-size: 70px;
+            font-weight: 500;
+            margin-bottom: 42px;
+            line-height: 70px;
+            animation: slide_top 0.7s linear forwards;
+            
+            & span{
+                color:$secondary-color;
+            }
+        }
+        &-title{
+            color: $gray-color;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: slide_top 0.8s linear forwards;
+            
+        }
+        &-link{
+            display: inline-flex;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px 0px;
+            color:$primary-color;
+            border-bottom: 2px solid $secondary-color;
+            animation-delay: 1s;
+            animation: slide_top 1s linear forwards;
+            
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next{
+        opacity: 1;
+        width: 5%;
+    }
+    .carousel-control-prev i,
+    .carousel-control-next i{
+        font-size: 18px;
+        color:#082b4f;
+        padding: 12px 10px;
+        background-color: #fff;
+        position: relative;
+    }
+    // .carousel-control-prev i::after{
+    //     position: absolute;
+    //     content: "";
+    //     border-width: 20px;
+    //     border-style: solid;
+    //     border-color: red pink green orange;
+    // }
+    .carousel-control-next span,
+    .carousel-control-prev span{
+        position: relative;
+    }
+    .carousel-control-prev span::after{
+        position: absolute;
+        content: "";
+        border-width:20px 8px;
+        border-style: solid;
+        border-color:#fff transparent transparent #fff;
+    }
+    .carousel-control-next span::before{
+        position: absolute;
+        content: "";
+        left: -15px;
+        border-width:21px 8px;
+        border-style: solid;
+        border-color:transparent #fff #fff transparent;
+    }
+}
+
+@include minWidth(1600px){
+    .hero .carousel{
+        &-item{
+            padding-top: 750px;
+            width: 100%;
+            background-size: auto 100%;
+        }
+    }
+    .carousel-control-prev i,
+    .carousel-control-next i{
+        font-size: 31px;
+        color:#082b4f;
+        padding: 15px 20px;
+        background-color: #fff;
+        position: relative;
+    }
+}
+
+@include maxWidth(1023px){
+    .hero .carousel-item {
+        padding-top: 500px;
+        background-position-x: 55%;
+    }
+    .hero .carousel-heading {
+        font-size: 55px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        line-height: 55px;
+    }
+    .hero .carousel-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+    .hero .carousel-link {
+        font-size: 14px;
+    }
+}
+@include maxWidth(739px){
+    .hero .carousel-control-prev,
+    .hero .carousel-control-next {
+        width: 10%;
+    }
+    .hero .carousel-control-prev i,
+    .hero .carousel-control-next i {
+        font-size: 12px;
+        padding: 8px 6px;
+        opacity: 0.5;
+    }
+    .hero .carousel-control-next span::before,
+    .hero .carousel-control-prev span::after {
+        display: none;
+    }
+    .hero .carousel-item {
+        padding-top: 300px;
+        background-position-x: 75%;
+    }
+    .hero .carousel-heading {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
+    .hero .carousel-title {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    .hero .carousel-link {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,179 @@
+.banner{
+    &-list{
+        display: flex;
+        align-items: center;
+        gap:0px 30px;
+    }
+    &-list2{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px 0px;
+    }
+    &-item{
+        position: relative;
+        overflow: hidden;
+
+        &:hover .banner-image {
+            transform: scale(1.1);
+        }
+        &:hover .banner-link::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+    &-link{
+        display: block;
+       
+        &::after{
+            content: "";
+            background: rgba(0, 0, 0, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;          
+        }
+    }
+    &-image{
+        transition: all 0.5s ease-in-out;
+    }
+    &-content{
+        position: absolute;
+        display: flex;
+        flex-direction: column; 
+
+        &.content-bottom{
+            bottom: 39px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: max-content;
+        }
+        &.content-left{
+            top:50%;
+            left: 6%;
+            transform: translateY(-50%);
+            width: max-content;
+        }
+    }
+    &-title{
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 19px;
+        text-transform: uppercase;
+    }
+    &-subtitle{
+        font-size: 18px;
+        font-weight: 400;
+        color:$gray-color;
+
+        .total-discount{
+            color: $secondary-color;
+        }
+    }
+    &-countdown{
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        width: max-content;
+        transform: translateX(-50%);
+        transition:all 0.5s ease-in-out;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        gap:0px 10px;
+        color: #fff;
+        min-height: 40px;
+        opacity: 1;
+        visibility: visible;
+        margin: 0px auto;
+
+        &-item{
+            width: 60px;
+            height: 62px;
+            background: #fff;         
+            display: flex;
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        &-count{
+            color:$secondary-color;
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            margin-top: 10px;
+        }
+        &-time{
+            font-size: 12px;
+            font-weight: 600;
+            color:$primary-color;
+        }
+    }
+    .total-discount-big{
+        font-weight: 600;
+        font-size: 60px;
+        color: $secondary-color;
+        margin-bottom: 13px;
+    }
+}
+
+@include maxWidth(1023px){
+    .banner-list {
+        flex-direction: column;
+        gap: 30px 0px;
+    }
+    .banner-title {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .banner-subtitle {
+        font-size: 16px;
+    }
+    .banner .total-discount-big {
+        font-size: 50px;
+    }
+    .banner-countdown-item{
+        width: 50px;
+        height: 50px;
+    }
+    .banner-countdown-count{
+        font-size: 16px;
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+    .banner-countdown-time{
+        font-size: 10px;
+    }
+}
+@include maxWidth(739px){
+    .banner-countdown{
+        bottom: 35%;
+    }
+    .banner-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .banner-subtitle {
+        font-size: 14px;
+    }
+    .banner .total-discount-big {
+        font-size: 40px;
+    }
+    .banner-countdown-item{
+        width: 40px;
+        height: 40px;
+    }
+    .banner-countdown-count{
+        font-size: 14px;
+        margin-bottom: 2px;
+        margin-top: 6px;
+    }
+    .banner-countdown-time{
+        font-size: 9px;
+    }
+}

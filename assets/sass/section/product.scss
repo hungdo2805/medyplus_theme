@@ -1,0 +1,114 @@
+.product{
+    &-list{
+        --spacing:30px;
+        --column:4;
+        --bottom:60px;
+        display: flex!important;
+        flex-wrap: wrap;
+        margin-left: calc(-1* var(--spacing));
+    }
+    &-inner{
+        position: relative;
+        overflow: hidden;
+
+        &:hover .product-image{
+            transform: scale(1.1);
+        }
+        &:hover .product-link::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+    &-item{
+        margin-left: var(--spacing);
+        width: calc( (100% / var(--column)) - var(--spacing) );
+        margin-bottom: var(--bottom);
+        display: flex;
+        flex-direction: column;
+    }
+    &-link{
+        display: block;
+
+        &::after{
+            content: "";
+            background: rgba(0, 0, 0, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+        }
+    }
+    &-image{
+        transition: all 0.3s ease-in-out;
+        flex-shrink: 0;
+    }
+    &-content{
+        text-align: center;
+        padding: 0px 35px;
+        // background-color: red;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+    &-name{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+        margin: 20px 0px 17px 0px;
+        // height: 44px;
+        // overflow: hidden;
+        // display: block;
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+    }
+    &-price{
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: auto;
+     
+        &-old{
+           
+            color:$gray-color;
+            text-decoration: line-through;
+        }
+        &-new{
+            margin-left: 12px;
+            color:$secondary-color;
+        }
+    }
+}
+
+@include maxWidth(1023px){
+    .product{
+        &-list{
+            --column:3;
+        }
+        &-content{
+            padding: 0px 20px;
+        }
+    }
+
+}
+
+
+@include maxWidth(739px){
+    .product{
+        &-list{
+            --column:2;
+            --bottom:30px;
+        }
+        &-content{
+            padding: 0px 10px;
+        }
+    }
+}

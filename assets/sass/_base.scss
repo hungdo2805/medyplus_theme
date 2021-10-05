@@ -1,0 +1,149 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1;
+  color: $primary-color;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+input,
+button,
+textarea,
+select {
+  font-family: $primary-font;
+  font-size: 14px;
+  outline: none;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+a{
+  transition: all 0.4s ease-in-out
+}
+a:hover{
+  color:$secondary-color;
+  text-decoration: none;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.space {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.second-font {
+  font-family: $secondary-font;
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $primary-font;
+  height: 55px;
+  &--primary {
+    background-color: $secondary-color;
+  }
+  &--secondary {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #f475a0, #feac3d);
+  }
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $gray;
+}
+
+dl, ol, ul {
+  margin-bottom: 0px;
+}
+.header-heading{
+  padding: 77px 0px 76px 0px;
+}
+.header-heading.heading-center{
+  text-align: center;
+}
+.heading {
+  font-size: 90px;
+  font-weight: 600;
+  font-family: $primary-font;
+  color: #f5f5f5;
+  position: relative;
+  text-transform: uppercase;
+
+}
+.heading::before {
+  position: absolute;
+  content: attr(data-text);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  white-space: nowrap;
+  font-size: 42px;
+  color: $primary-color;
+  font-weight: 600;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+.header-heading.heading-center .heading::before{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@include maxWidth(1023px) {
+  .header-heading{
+    padding: 50px 0px 50px 0px;
+  }
+  .heading {
+    font-size: 55px;
+  }
+  .heading::before {
+    font-size: 30px;
+  }
+}
+@include maxWidth(739px) {
+  .heading {
+    font-size: 40px;
+  }
+  .heading::before {
+    font-size: 25px;
+  }
+
+}
+
+

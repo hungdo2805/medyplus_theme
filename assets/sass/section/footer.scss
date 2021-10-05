@@ -1,0 +1,90 @@
+.footer{
+
+    &-top{
+        padding: 61px 0px;
+        background-color: $footer-bg;
+    }
+
+    &-heading{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    &-list{
+        list-style: none;
+    }
+    &-link{
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        color:$gray-color;
+        margin-bottom: 26px;
+    }
+    &-contact{
+        &-item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        &-icon{
+            font-size: 16px;
+            font-weight: 400;
+            color:$secondary-color;
+            line-height: 22px;
+            margin-right: 22px;
+            min-width: 16px;
+        }
+        &-text{
+            font-size: 13px;
+            font-weight: 500;
+            color:$gray-color;
+            line-height: 20px;
+        }
+    }
+    &-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
+    &-copyright{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color:$gray-color;
+
+        & a {
+            color:$secondary-color;
+        }
+    }
+    &-social{
+        &-list{
+            list-style: none;
+            display: flex;
+        }
+        &-link{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-right: 28px;
+            color:$gray-color;
+        }
+    }
+
+}
+
+@include maxWidth(1023px){
+    .footer-bottom{
+        flex-direction: column;
+        gap: 20px 0px;
+    }
+    .footer-top {
+        padding: 40px 0px;
+    }
+}
+@include maxWidth(739px){
+    .footer-social{
+        margin-bottom: 20px;
+    }
+}

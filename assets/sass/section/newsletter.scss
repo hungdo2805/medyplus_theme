@@ -1,0 +1,113 @@
+.newsletter{
+    padding: 100px 0px;
+    background-image: url(../images/bg_newsletter.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    text-align: center;
+    color:$light-color;
+
+    &-title{
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 21px;
+    }
+    &-subtitle{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 62px;
+    }
+    &-form{
+        position: relative;
+        max-width: 772px;
+        margin: 0px auto;
+    }
+    &-input{
+        height: 70px;
+        border: none;
+        outline: none;
+        width: 100%;
+        border-radius: 40px;
+        padding-left: 30px;
+        font-size: 13px;
+        font-weight: 400;
+        color: $secondary-color;
+        
+        &::placeholder{
+            font-size: 13px;
+            font-weight: 400;
+            color: $gray-color;
+        }
+    }
+    &-button{
+        background-color:$secondary-color;
+        font-size: 16px;
+        font-weight: 500;
+        min-width: 170px;
+        height: 58px;
+        line-height: 58px;
+        border-radius: 40px;
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+@include minWidth(1600px){
+    // .newsletter{
+    //     &-form{
+    //         min-width: 772px;
+    
+    //     }
+    // }
+}
+@include maxWidth(1023px){
+    .newsletter {
+        padding: 60px 0px;
+    }
+    .newsletter-title{
+        font-size: 28px;
+    }
+    .newsletter-subtitle{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .newsletter-form {
+        max-width: 600px;
+    }
+    .newsletter-input{
+        height: 50px;
+    }
+    .newsletter-button{
+        height: 40px;
+        font-size: 15px;
+        min-width: 150px;
+    }
+}
+@include maxWidth(739px){
+    .newsletter {
+        padding: 40px 0px;
+    }
+    .newsletter-title{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 6px;
+    }
+    .newsletter-subtitle{
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .newsletter-form {
+        max-width: 400px;
+    }
+    .newsletter-input{
+        height: 40px;
+    }
+    .newsletter-button{
+        height: 30px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+}
