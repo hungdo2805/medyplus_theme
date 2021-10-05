@@ -8,12 +8,12 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 30px 0px;
+        
     }
     &-item{
         position: relative;
         overflow: hidden;
-
+        margin: 15px 0px;
         &:hover .banner-image {
             transform: scale(1.1);
         }
@@ -125,7 +125,11 @@
 @include maxWidth(1023px){
     .banner-list {
         flex-direction: column;
-        gap: 30px 0px;
+        // gap: 30px 0px;
+        
+    }
+    .banner-item{
+        // margin: 15px 0px;
     }
     .banner-title {
         font-size: 25px;
