@@ -809,7 +809,6 @@ dl, ol, ul {
   border-radius: 2px;
   display: flex;
   align-items: center;
-  gap: 0px 10px;
   color: #fff;
   min-height: 40px;
   opacity: 1;
@@ -819,6 +818,7 @@ dl, ol, ul {
 .banner-countdown-item {
   width: 60px;
   height: 62px;
+  margin: 0px 5px;
   background: #fff;
   display: flex;
   flex: 1;
