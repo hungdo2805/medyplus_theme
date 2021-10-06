@@ -79,10 +79,12 @@
 @include maxWidth(1023px){
     .footer-bottom{
         flex-direction: column;
-        gap: 20px 0px;
     }
     .footer-top {
         padding: 40px 0px;
+    }
+    .footer-payments{
+        margin-top: 20px;
     }
 }
 @include maxWidth(739px){

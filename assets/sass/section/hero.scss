@@ -119,7 +119,12 @@
     }
 
 }
-
+@include maxWidth(1300px){
+    .hero .carousel-item {
+        padding-top: 500px;
+        background-position-x: 35%;
+    }
+}
 @include maxWidth(1023px){
     .hero .carousel-item {
         padding-top: 500px;

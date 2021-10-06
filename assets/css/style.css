@@ -648,6 +648,12 @@ dl, ol, ul {
     border-width: 29px 12px;
   }
 }
+@media screen and (max-width: 1300px) {
+  .hero .carousel-item {
+    padding-top: 500px;
+    background-position-x: 35%;
+  }
+}
 @media screen and (max-width: 1023px) {
   .hero .carousel-item {
     padding-top: 500px;
@@ -1341,11 +1347,14 @@ dl, ol, ul {
 @media screen and (max-width: 1023px) {
   .footer-bottom {
     flex-direction: column;
-    gap: 20px 0px;
   }
 
   .footer-top {
     padding: 40px 0px;
+  }
+
+  .footer-payments {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 739px) {
