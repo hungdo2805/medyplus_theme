@@ -445,7 +445,7 @@ dl, ol, ul {
   width: 400px;
   opacity: 0;
   visibility: hidden;
-  box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out;
   padding: 10px;
   z-index: 1;
@@ -481,6 +481,10 @@ dl, ol, ul {
   color: #000000;
   margin-left: 10px;
   line-height: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.header-middle .cart-product-name:hover {
+  color: #0ca8c9;
 }
 .header-middle .cart-body {
   min-width: 60px;
@@ -490,16 +494,27 @@ dl, ol, ul {
   font-size: 12px;
 }
 .header-middle .cart-product-price {
+  display: block;
   color: #0ca8c9;
   font-size: 14px;
   font-weight: 500;
-  display: inline-block;
-  margin-top: 2px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  text-align: right;
 }
-.header-middle .cart-action {
-  color: #0ca8c9;
+.header-middle .cart-footer {
+  display: flex;
+  justify-content: end;
+}
+.header-middle .cart-link {
+  display: inline-block;
+  min-width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
   font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0ca8c9;
 }
 .header-bottom {
   background-color: #0ca8c9;
