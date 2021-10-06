@@ -1,4 +1,4 @@
-
+//-------------------------------------- RENDER COUNTDOWN---------------------------------------
 const bannerCountDown =  document.querySelectorAll('.banner-countdown');
 
 bannerCountDown.forEach(element => {
@@ -52,9 +52,14 @@ function renderCountDown(element){
   }, 1000);
 }
 
+
+
+// ------------------------------get year copyright--------------------------
+
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
-//toogle menu mobile
+
+//--------------------------------toogle menu mobile---------------------------------
 
 const toogleMobile = document.getElementById('toogle-mobile');
 
@@ -65,22 +70,57 @@ const mobileClose = document.querySelector('.mobile-close');
 const overlay = document.querySelector('.overlay');
 
 toogleMobile.onclick = function(){
-    menuMobileWrapper.classList.toggle('open');
-    overlay.classList.toggle('open');
+  menuMobileWrapper.classList.toggle('open');
+  overlay.classList.toggle('open');
 }
 
 
 overlay.onclick = function(){
-    menuMobileWrapper.classList.toggle('open');
-    overlay.classList.toggle('open');
+  menuMobileWrapper.classList.toggle('open');
+  overlay.classList.toggle('open');
 }
 
 mobileClose.onclick = function(){
-    menuMobileWrapper.classList.toggle('open');
-    overlay.classList.toggle('open');
+  menuMobileWrapper.classList.toggle('open');
+  overlay.classList.toggle('open');
 }
 
 
+
+//------------------------------------ dropdown category-------------------------------------------
+
+const dropCategory = document.getElementById('drop-category');
+const selectText = document.getElementById('select-text');
+const dropOptions = document.getElementsByClassName('drop-category-option');
+const dropCategoryList = document.getElementById('drop-category-list');
+const arrowIcon = document.getElementById('drop-category-icon');
+
+dropCategory.onclick = function(){
+  dropCategoryList.classList.toggle('open-drop');
+  arrowIcon.classList.toggle('rotate');
+}
+
+for( option of dropOptions)
+{
+    option.onclick = function(){
+        
+        selectText.innerHTML = this.textContent;
+    }
+}
+
+//------------------------------------ dropdown category vertical-------------------------------------------
+
+const categoryToogle = document.querySelector('.category-toogle');
+const categoryDropdown = document.querySelector('.category-dropdown');
+
+
+categoryToogle.addEventListener('click',function(){
+  this.classList.toggle('open');
+  categoryDropdown.classList.toggle('open');
+})
+
+
+//------------------------------------ JQUERY-------------------------------------------
 
 $(document).ready(function(){
   $('.product-slick').slick({
