@@ -95,7 +95,9 @@ const dropOptions = document.getElementsByClassName('drop-category-option');
 const dropCategoryList = document.getElementById('drop-category-list');
 const arrowIcon = document.getElementById('drop-category-icon');
 
-dropCategory.onclick = function(){
+dropCategory.onclick = function(event){
+  event.stopPropagation();
+
   dropCategoryList.classList.toggle('open-drop');
   arrowIcon.classList.toggle('rotate');
 }
@@ -114,13 +116,36 @@ const categoryToogle = document.querySelector('.category-toogle');
 const categoryDropdown = document.querySelector('.category-dropdown');
 
 
-categoryToogle.addEventListener('click',function(){
+categoryToogle.addEventListener('click',function(event){
+
+  event.stopPropagation();
+
   this.classList.toggle('open');
   categoryDropdown.classList.toggle('open');
 })
 
 
+
+
+document.body.addEventListener('click', function(event){
+
+
+  dropCategoryList.classList.remove('open-drop');
+  arrowIcon.classList.remove('rotate');
+
+
+  categoryToogle.classList.remove('open');
+  categoryDropdown.classList.remove('open');
+
+}); 
+
 //------------------------------------ JQUERY-------------------------------------------
+
+// $(document).click(function () {
+//   // $styledSelect.removeClass('active');
+//   // $list.hide();
+//   alert(1)
+// });
 
 $(document).ready(function(){
   $('.product-slick').slick({
