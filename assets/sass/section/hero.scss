@@ -6,16 +6,16 @@
         }
         &-content{
             position: absolute;
-            top: 50%;
-            left: 20%;
-            transform: translate(-20%, -50%);
+            top: 48%;
+            left: 12%;
+            transform: translateY(-50%);
             text-align: left;
         }
         &-heading{
-            font-size: 70px;
+            font-size: 72px;
             font-weight: 500;
             margin-bottom: 42px;
-            line-height: 70px;
+            line-height: 80px;
             animation: slide_top 0.7s linear forwards;
             
             & span{
@@ -25,8 +25,8 @@
         &-title{
             color: $gray-color;
             font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: 300;
+            margin-bottom: 54px;
+            font-weight: 500;
             animation: slide_top 0.8s linear forwards;
             
         }
@@ -84,21 +84,40 @@
 }
 
 @include minWidth(1600px){
-    .hero .carousel{
-        &-item{
-            padding-top: 750px;
-            width: 100%;
-            background-size: auto 100%;
+    .hero {
+        .carousel{
+            &-item{
+                padding-top: 750px;
+                width: 100%;
+                background-size: auto 100%;
+            }
+            &-content{
+                position: absolute;
+                top: 50%;
+                left: 20%;
+                transform: translateY(-50%);
+                text-align: left;
+            }
+            &-heading{
+                font-size: 72px;
+                font-weight: 500;
+                margin-bottom: 26px;
+                line-height: 80px;
+            }
+        }
+        .carousel-control-prev i,
+        .carousel-control-next i{
+            padding: 20px 22px;
+        }
+        .carousel-control-prev span::after {
+            border-width: 29px 8px;
+        }
+        .carousel-control-next span::before {
+            left: -23px;
+            border-width: 29px 12px;
         }
     }
-    .carousel-control-prev i,
-    .carousel-control-next i{
-        font-size: 31px;
-        color:#082b4f;
-        padding: 15px 20px;
-        background-color: #fff;
-        position: relative;
-    }
+
 }
 
 @include maxWidth(1023px){

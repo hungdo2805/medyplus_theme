@@ -129,7 +129,7 @@ dl, ol, ul {
 }
 
 .header-heading {
-  padding: 77px 0px 76px 0px;
+  padding: 46px 0px;
 }
 
 .header-heading.heading-center {
@@ -259,7 +259,7 @@ dl, ol, ul {
   margin-left: 32px;
 }
 .header-middle {
-  padding: 26px 0px 27px 0px;
+  padding: 25px 0px 25px 0px;
 }
 .header-middle .header-search {
   position: relative;
@@ -301,10 +301,10 @@ dl, ol, ul {
 }
 .header-middle .header-search-input input {
   height: 38px;
-  padding-left: 19px;
+  margin-left: 22px;
   font-size: 12px;
   font-weight: 500;
-  min-width: 342px;
+  min-width: 379px;
   color: #0ca8c9;
 }
 .header-middle .header-search-input input::placeholder {
@@ -552,16 +552,16 @@ dl, ol, ul {
 }
 .hero .carousel-content {
   position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-20%, -50%);
+  top: 48%;
+  left: 12%;
+  transform: translateY(-50%);
   text-align: left;
 }
 .hero .carousel-heading {
-  font-size: 70px;
+  font-size: 72px;
   font-weight: 500;
   margin-bottom: 42px;
-  line-height: 70px;
+  line-height: 80px;
   animation: slide_top 0.7s linear forwards;
 }
 .hero .carousel-heading span {
@@ -570,8 +570,8 @@ dl, ol, ul {
 .hero .carousel-title {
   color: #8f8f8f;
   font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 300;
+  margin-bottom: 54px;
+  font-weight: 500;
   animation: slide_top 0.8s linear forwards;
 }
 .hero .carousel-link {
@@ -623,14 +623,29 @@ dl, ol, ul {
     width: 100%;
     background-size: auto 100%;
   }
-
-  .carousel-control-prev i,
-.carousel-control-next i {
-    font-size: 31px;
-    color: #082b4f;
-    padding: 15px 20px;
-    background-color: #fff;
-    position: relative;
+  .hero .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .hero .carousel-heading {
+    font-size: 72px;
+    font-weight: 500;
+    margin-bottom: 26px;
+    line-height: 80px;
+  }
+  .hero .carousel-control-prev i,
+.hero .carousel-control-next i {
+    padding: 20px 22px;
+  }
+  .hero .carousel-control-prev span::after {
+    border-width: 29px 8px;
+  }
+  .hero .carousel-control-next span::before {
+    left: -23px;
+    border-width: 29px 12px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -730,19 +745,20 @@ dl, ol, ul {
   }
 }
 .banner-list {
+  --spacing:30px;
+  --column:2;
   display: flex;
-  align-items: center;
-  gap: 0px 30px;
+  margin-left: calc(-1* var(--spacing));
 }
-.banner-list2 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.banner-col {
+  margin-left: var(--spacing);
+}
+.banner-list2 .banner-item:nth-child(1) {
+  margin-bottom: 30px;
 }
 .banner-item {
   position: relative;
   overflow: hidden;
-  margin: 15px 0px;
 }
 .banner-item:hover .banner-image {
   transform: scale(1.1);
@@ -788,7 +804,7 @@ dl, ol, ul {
 .banner-title {
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 19px;
+  margin-bottom: 13px;
   text-transform: uppercase;
 }
 .banner-subtitle {
@@ -848,6 +864,10 @@ dl, ol, ul {
 @media screen and (max-width: 1023px) {
   .banner-list {
     flex-direction: column;
+  }
+
+  .banner-col {
+    margin-bottom: 30px;
   }
 
   .banner-title {
@@ -965,8 +985,8 @@ dl, ol, ul {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
-  line-height: 22px;
-  margin: 20px 0px 17px 0px;
+  line-height: 20px;
+  margin: 20px 0px 10px 0px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -987,6 +1007,18 @@ dl, ol, ul {
   margin-left: 12px;
   color: #0ca8c9;
 }
+.product .previous-btn,
+.product .next-btn {
+  font-size: 45px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: #8f8f8f;
+}
+.product .previous-btn:hover,
+.product .next-btn:hover {
+  color: #0ca8c9;
+}
 
 @media screen and (max-width: 1023px) {
   .product-list {
@@ -994,6 +1026,13 @@ dl, ol, ul {
   }
   .product-content {
     padding: 0px 20px;
+  }
+  .product .previous-btn,
+.product .next-btn {
+    font-size: 26px;
+  }
+  .product .next-btn {
+    margin-left: 26px;
   }
 }
 @media screen and (max-width: 739px) {
@@ -1004,11 +1043,24 @@ dl, ol, ul {
   .product-content {
     padding: 0px 10px;
   }
+  .product .previous-btn,
+.product .next-btn {
+    font-size: 22px;
+  }
+  .product .next-btn {
+    margin-left: 20px;
+  }
 }
 .news {
   background-image: url(../images/bg_news.jpg);
   background-repeat: no-repeat;
   background-size: auto 100%;
+}
+.news .header-heading {
+  padding: 87px 0px 48px 0px;
+}
+.news .heading {
+  color: #ebebeb;
 }
 .news-list {
   --spacing:30px;
@@ -1054,10 +1106,10 @@ dl, ol, ul {
 }
 .news-title {
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 26px;
-  margin: 30px 0px 22px 0px;
+  margin: 25px 0px 11px 0px;
 }
 .news-time {
   font-size: 14px;
@@ -1099,14 +1151,15 @@ dl, ol, ul {
 }
 .newsletter-title {
   font-size: 32px;
+  letter-spacing: -0.5px;
   font-weight: 600;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
 }
 .newsletter-subtitle {
   font-size: 14px;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 62px;
+  margin-bottom: 56px;
 }
 .newsletter-form {
   position: relative;
@@ -1202,7 +1255,7 @@ dl, ol, ul {
   }
 }
 .brand {
-  padding: 64px 0px;
+  padding: 57.5px 0px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1216,13 +1269,13 @@ dl, ol, ul {
   }
 }
 .footer-top {
-  padding: 61px 0px;
+  padding: 56px 0px 40px 0px;
   background-color: #f2f2f2;
 }
 .footer-heading {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   text-transform: uppercase;
 }
 .footer-list {
@@ -1233,12 +1286,12 @@ dl, ol, ul {
   font-size: 13px;
   font-weight: 500;
   color: #8f8f8f;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 .footer-contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 .footer-contact-icon {
   font-size: 16px;
@@ -1252,7 +1305,8 @@ dl, ol, ul {
   font-size: 13px;
   font-weight: 500;
   color: #8f8f8f;
-  line-height: 20px;
+  line-height: 23px;
+  max-width: 280px;
 }
 .footer-bottom {
   display: flex;
@@ -1269,6 +1323,9 @@ dl, ol, ul {
 .footer-copyright a {
   color: #0ca8c9;
 }
+.footer-social {
+  margin-top: 30px;
+}
 .footer-social-list {
   list-style: none;
   display: flex;
@@ -1277,7 +1334,7 @@ dl, ol, ul {
   font-size: 13px;
   font-weight: 400;
   line-height: 30px;
-  margin-right: 28px;
+  margin-right: 23px;
   color: #8f8f8f;
 }
 

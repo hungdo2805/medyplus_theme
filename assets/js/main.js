@@ -89,12 +89,21 @@ $(document).ready(function(){
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay:true,
+    autoplay:false,
     autoplaySpeed:3000,
-    // arrows:true,
-    prevArrow:"<button type='button' class='slick-prev'><i class='fas fa-chevron-left'></i></button>",
-    nextArrow:"<button type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>"
+    arrows:false,
+    // prevArrow:"<button type='button' class='slick-prev'><i class='fas fa-chevron-left'></i></button>",
+    // nextArrow:"<button type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>"
   });
+
+  $('.previous-btn').click(function(){
+    $('.product-slick').slick('slickPrev');
+  })
+  
+  $('.next-btn').click(function(){
+    $('.product-slick').slick('slickNext');
+  })
+
 
   $('.brand-list').slick({
     dots: false,

@@ -58,7 +58,7 @@
     }
 
     &-middle{
-      padding: 26px 0px 27px 0px;
+      padding: 25px 0px 25px 0px;
       .header-search{
         position: relative;
         &-wrapper{
@@ -99,10 +99,10 @@
 
           input{
             height: 38px;
-            padding-left: 19px;
+            margin-left: 22px;
             font-size: 12px;
             font-weight: 500;
-            min-width: 342px;
+            min-width: 379px;
             color: $secondary-color;
 
             &::placeholder{
