@@ -124,6 +124,12 @@ categoryToogle.addEventListener('click',function(event){
   categoryDropdown.classList.toggle('open');
 })
 
+const verticalMenuList = document.querySelectorAll('.vertical-menu li a');
+
+
+verticalMenuList.forEach(verticalMenu => verticalMenu.addEventListener('click',function(e){
+  e.stopPropagation();
+}))
 
 
 
