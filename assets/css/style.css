@@ -200,6 +200,11 @@ dl, ol, ul {
     font-size: 25px;
   }
 }
+@media screen and (min-width: 1921px) {
+  body {
+    max-width: 100%;
+  }
+}
 .header-top {
   background-color: #000000;
   color: #fff;
@@ -862,7 +867,15 @@ dl, ol, ul {
   border-color: transparent #fff #fff transparent;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1920px) {
+  .hero .carousel-item {
+    padding-top: 1200px;
+    width: 100%;
+    background-size: auto 100%;
+    background-position-x: 55%;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1920px) {
   .hero .carousel-item {
     padding-top: 750px;
     width: 100%;
@@ -1194,6 +1207,11 @@ dl, ol, ul {
 
   .banner-countdown-time {
     font-size: 9px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner-content.content-bottom {
+    bottom: 20px;
   }
 }
 .product-list {

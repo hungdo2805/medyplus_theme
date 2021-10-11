@@ -149,3 +149,8 @@ dl, ol, ul {
 }
 
 
+@include minWidth(1921px){
+  body {
+    max-width: 100%;
+  }
+}

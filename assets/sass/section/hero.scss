@@ -83,8 +83,21 @@
         border-color:transparent #fff #fff transparent;
     }
 }
+@include minWidth(1920px){
+    .hero {
+        .carousel{
+            &-item{
+                padding-top: 1200px;
+                width: 100%;
+                background-size: auto 100%;
+                background-position-x: 55%;
+            }
+        }
 
-@include minWidth(1600px){
+    }
+}
+
+@include minWidthAndMaxWidth(1600px,1920px){
     .hero {
         .carousel{
             &-item{

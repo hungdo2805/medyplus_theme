@@ -200,3 +200,9 @@
         font-size: 9px;
     }
 }
+
+@include maxWidth(400px){
+    .banner-content.content-bottom{
+        bottom: 20px;
+    }
+}

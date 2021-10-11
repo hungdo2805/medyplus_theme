@@ -8,3 +8,8 @@
     @content;
   }
 }
+@mixin minWidthAndMaxWidth($breakpoint1,$breakpoint2){
+  @media(min-width:$breakpoint1) and (max-width:$breakpoint2){
+    @content;
+  }
+}
