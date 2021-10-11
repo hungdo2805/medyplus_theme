@@ -179,3 +179,14 @@
         font-size: 12px;
     }
 }
+
+@include maxWidth(400px){
+
+    .hero .carousel-heading {
+      font-size: 25px;
+    }
+    .hero .carousel-item {
+        padding-top: 220px;
+        background-position-x: 85%;
+    }
+}

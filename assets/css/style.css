@@ -643,7 +643,7 @@ dl, ol, ul {
   top: 0;
   height: 100vh;
   transition: all 0.2s linear;
-  left: -100%;
+  left: -120%;
   padding: 25px 15px 15px 15px;
   overflow-y: auto;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
@@ -770,6 +770,25 @@ dl, ol, ul {
 @media screen and (max-width: 739px) {
   .header-top {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu-mobile-wrapper {
+    width: 280px;
+  }
+
+  .togglebar-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-middle {
+    padding: 18px 0px;
+  }
+
+  .header-middle .header-controls-item svg {
+    width: 20px;
+    height: 20px;
   }
 }
 .hero .carousel-item {
@@ -940,6 +959,16 @@ dl, ol, ul {
 
   .hero .carousel-link {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero .carousel-heading {
+    font-size: 25px;
+  }
+
+  .hero .carousel-item {
+    padding-top: 220px;
+    background-position-x: 85%;
   }
 }
 .service {
