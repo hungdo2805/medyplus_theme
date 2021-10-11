@@ -115,6 +115,16 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
 p {
   margin-bottom: 0px;
 }
@@ -892,7 +902,7 @@ dl, ol, ul {
     font-size: 72px;
     font-weight: 500;
     margin-bottom: 26px;
-    line-height: 100px;
+    line-height: 85px;
   }
   .hero .carousel-control-prev i,
 .hero .carousel-control-next i {
@@ -1290,6 +1300,15 @@ dl, ol, ul {
   margin-left: 12px;
   color: #0ca8c9;
 }
+.product .header-heading {
+  position: relative;
+}
+.product .button-control {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .product .previous-btn,
 .product .next-btn {
   font-size: 45px;
@@ -1309,6 +1328,9 @@ dl, ol, ul {
   }
   .product-content {
     padding: 0px 20px;
+  }
+  .product .button-control {
+    right: 0px;
   }
   .product .previous-btn,
 .product .next-btn {
@@ -1333,10 +1355,12 @@ dl, ol, ul {
   .product .next-btn {
     margin-left: 20px;
   }
+  .product .button-control {
+    display: none;
+  }
 }
 .news {
   background-image: url(../images/bg_news.jpg);
-  background-repeat: no-repeat;
   background-size: auto 100%;
 }
 .news .header-heading {
@@ -1395,7 +1419,7 @@ dl, ol, ul {
   margin: 25px 0px 11px 0px;
 }
 .news-time {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #8f8f8f;
 }
@@ -1427,7 +1451,6 @@ dl, ol, ul {
 .newsletter {
   padding: 100px 0px;
   background-image: url(../images/bg_newsletter.jpg);
-  background-repeat: no-repeat;
   background-size: auto 100%;
   text-align: center;
   color: #fff;

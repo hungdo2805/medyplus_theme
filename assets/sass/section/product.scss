@@ -1,4 +1,5 @@
 .product{
+    
     &-list{
         --spacing:30px;
         --column:4;
@@ -86,6 +87,15 @@
             color:$secondary-color;
         }
     }
+    .header-heading{
+        position: relative;
+    }
+    .button-control {
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .previous-btn,
     .next-btn {
         font-size: 45px;
@@ -114,6 +124,9 @@
         &-content{
             padding: 0px 20px;
         }
+        .button-control {
+            right: 0px;
+        }
         .previous-btn,
         .next-btn {
             font-size: 26px;
@@ -141,6 +154,9 @@
         }
         .next-btn {
             margin-left: 20px;
+        }
+        .button-control {
+            display: none;
         }
     }
 }
