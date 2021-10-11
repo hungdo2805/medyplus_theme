@@ -71,9 +71,9 @@
             width: max-content;
         }
         &.content-left{
-            top:50%;
+            top:48%;
             left: 6%;
-            transform: translateY(-50%);
+            transform: translateY(-48%);
             width: max-content;
         }
     }
@@ -138,7 +138,6 @@
         font-weight: 600;
         font-size: 60px;
         color: $secondary-color;
-        margin-bottom: 8px;
     }
 }
 

@@ -1085,9 +1085,9 @@ dl, ol, ul {
   width: max-content;
 }
 .banner-content.content-left {
-  top: 50%;
+  top: 48%;
   left: 6%;
-  transform: translateY(-50%);
+  transform: translateY(-48%);
   width: max-content;
 }
 .banner-title {
@@ -1147,7 +1147,6 @@ dl, ol, ul {
   font-weight: 600;
   font-size: 60px;
   color: #0ca8c9;
-  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1023px) {
