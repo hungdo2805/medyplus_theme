@@ -43,17 +43,36 @@
             
         }
     }
+    .carousel-control-prev{
+        left: 20px;
+    }
+    .carousel-control-next{
+        right: 20px;
+    }
     .carousel-control-prev,
     .carousel-control-next{
         opacity: 1;
-        width: 5%;
+        width: max-content;
     }
+
+    .carousel-control-prev span{
+        background-image: url('../images/previous_bg.png');
+    }
+    .carousel-control-next span{
+        background-image: url('../images/next_bg.png');
+    }
+
+    .carousel-control-prev span,
+    .carousel-control-next span{
+        width: 60px;
+        height: 60px;
+    }
+    
     .carousel-control-prev i,
     .carousel-control-next i{
-        font-size: 18px;
+        font-size: 31px;
         color:#082b4f;
-        padding: 12px 10px;
-        background-color: #fff;
+        line-height: 60px;
         position: relative;
     }
     // .carousel-control-prev i::after{
@@ -67,21 +86,21 @@
     .carousel-control-prev span{
         position: relative;
     }
-    .carousel-control-prev span::after{
-        position: absolute;
-        content: "";
-        border-width:20px 8px;
-        border-style: solid;
-        border-color:#fff transparent transparent #fff;
-    }
-    .carousel-control-next span::before{
-        position: absolute;
-        content: "";
-        left: -15px;
-        border-width:21px 8px;
-        border-style: solid;
-        border-color:transparent #fff #fff transparent;
-    }
+    // .carousel-control-prev span::after{
+    //     position: absolute;
+    //     content: "";
+    //     border-width:20px 8px;
+    //     border-style: solid;
+    //     border-color:#fff transparent transparent #fff;
+    // }
+    // .carousel-control-next span::before{
+    //     position: absolute;
+    //     content: "";
+    //     left: -15px;
+    //     border-width:21px 8px;
+    //     border-style: solid;
+    //     border-color:transparent #fff #fff transparent;
+    // }
 }
 @include minWidth(1920px){
     .hero {
@@ -93,6 +112,7 @@
                 background-position-x: 55%;
             }
         }
+
 
     }
 }
@@ -118,18 +138,19 @@
                 margin-bottom: 26px;
                 line-height: 85px;
             }
+
         }
-        .carousel-control-prev i,
-        .carousel-control-next i{
-            padding: 20px 22px;
-        }
-        .carousel-control-prev span::after {
-            border-width: 29px 8px;
-        }
-        .carousel-control-next span::before {
-            left: -23px;
-            border-width: 29px 12px;
-        }
+        // .carousel-control-prev i,
+        // .carousel-control-next i{
+        //     padding: 20px 22px;
+        // }
+        // .carousel-control-prev span::after {
+        //     border-width: 29px 8px;
+        // }
+        // .carousel-control-next span::before {
+        //     left: -32px;
+        //     border-width: 29px 16px
+        // }
     }
 
 }
@@ -158,22 +179,43 @@
     .hero .carousel-link {
         font-size: 14px;
     }
+    .hero .carousel-control-prev i,
+    .hero .carousel-control-next i {
+        font-size: 18px;
+    }
 }
 @include maxWidth(739px){
-    .hero .carousel-control-prev,
-    .hero .carousel-control-next {
-        width: 10%;
+    // .hero .carousel-control-prev,
+    // .hero .carousel-control-next {
+    //     // width: 10%;
+    //     // display: none;
+    // }
+    .hero .carousel-control-prev{
+        left: 10px;
     }
+    .hero .carousel-control-next{
+        right: 10px;
+    }
+    .hero .carousel-control-prev span,
+    .hero .carousel-control-next span{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        background-image: none;
+    }
+    
     .hero .carousel-control-prev i,
     .hero .carousel-control-next i {
         font-size: 12px;
-        padding: 8px 6px;
         opacity: 0.5;
+        line-height: 30px;
     }
-    .hero .carousel-control-next span::before,
-    .hero .carousel-control-prev span::after {
-        display: none;
-    }
+    // .hero .carousel-control-next span::before,
+    // .hero .carousel-control-prev span::after {
+    //     display: none;
+    // }
+
+
     .hero .carousel-item {
         padding-top: 300px;
         background-position-x: 75%;
