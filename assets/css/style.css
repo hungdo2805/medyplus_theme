@@ -306,9 +306,9 @@ dl, ol, ul {
   line-height: 24px;
 }
 .header-middle .header-search-wrapper .drop-category-icon {
-  color: #bababa;
+  color: #8f8f8f;
   line-height: 24px;
-  margin-left: 16px;
+  margin-left: 11px;
   transition: 0.3s ease-in-out;
 }
 .header-middle .header-search-wrapper .drop-category-icon.rotate {
@@ -565,7 +565,6 @@ dl, ol, ul {
   font-weight: 600;
   line-height: 28.53px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 .header-bottom .category-dropdown {
   position: absolute;
@@ -785,7 +784,7 @@ dl, ol, ul {
   text-align: left;
 }
 .hero .carousel-heading {
-  font-size: 72px;
+  font-size: 70px;
   font-weight: 500;
   margin-bottom: 42px;
   line-height: 80px;
@@ -861,7 +860,7 @@ dl, ol, ul {
     font-size: 72px;
     font-weight: 500;
     margin-bottom: 26px;
-    line-height: 80px;
+    line-height: 100px;
   }
   .hero .carousel-control-prev i,
 .hero .carousel-control-next i {
@@ -956,7 +955,7 @@ dl, ol, ul {
 .service-title {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 11px;
+  margin-bottom: 7px;
 }
 .service-subtitle {
   font-size: 14px;
@@ -988,6 +987,10 @@ dl, ol, ul {
 }
 .banner-list2 .banner-item:nth-child(1) {
   margin-bottom: 30px;
+}
+.banner-list2 .banner-item:nth-child(1) .banner-title {
+  font-size: 24px;
+  font-weight: 400;
 }
 .banner-item {
   position: relative;
@@ -1037,7 +1040,7 @@ dl, ol, ul {
 .banner-title {
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 .banner-subtitle {
@@ -1091,7 +1094,7 @@ dl, ol, ul {
   font-weight: 600;
   font-size: 60px;
   color: #0ca8c9;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1023px) {

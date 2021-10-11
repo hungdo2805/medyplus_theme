@@ -25,6 +25,10 @@
         .banner-item:nth-child(1){
             margin-bottom: 30px;
         }
+        .banner-item:nth-child(1) .banner-title{
+            font-size: 24px;
+            font-weight: 400;
+        }
     }
     &-item{
         position: relative;
@@ -76,7 +80,7 @@
     &-title{
         font-size: 30px;
         font-weight: 600;
-        margin-bottom: 13px;
+        margin-bottom: 8px;
         text-transform: uppercase;
     }
     &-subtitle{
@@ -134,7 +138,7 @@
         font-weight: 600;
         font-size: 60px;
         color: $secondary-color;
-        margin-bottom: 13px;
+        margin-bottom: 8px;
     }
 }
 

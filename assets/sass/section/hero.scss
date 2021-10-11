@@ -12,10 +12,11 @@
             text-align: left;
         }
         &-heading{
-            font-size: 72px;
+            font-size: 70px;
             font-weight: 500;
             margin-bottom: 42px;
             line-height: 80px;
+          
             animation: slide_top 0.7s linear forwards;
             
             & span{
@@ -102,7 +103,7 @@
                 font-size: 72px;
                 font-weight: 500;
                 margin-bottom: 26px;
-                line-height: 80px;
+                line-height: 100px;
             }
         }
         .carousel-control-prev i,

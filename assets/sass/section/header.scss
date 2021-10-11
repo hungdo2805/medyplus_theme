@@ -110,9 +110,9 @@
               line-height: 24px;
             }
             &-icon{
-              color:$gray-light-color; 
+              color:$gray-color; 
               line-height: 24px;
-              margin-left: 16px;
+              margin-left: 11px;
               transition: 0.3s ease-in-out;
 
               &.rotate{
@@ -409,7 +409,6 @@
           font-weight: 600;
           line-height: 28.53px;
           text-transform: uppercase;
-          letter-spacing: 1px;
         }
         &-dropdown{
           position: absolute;
