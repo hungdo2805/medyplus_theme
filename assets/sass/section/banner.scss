@@ -1,38 +1,30 @@
 .banner{
-    // &-list{
-    //     display: flex;
-    //     align-items: center;
-    //     gap:0px 30px;
-    // }
-    // &-list2{
-    //     display: flex;
-    //     align-items: center;
-    //     flex-direction: column;
-        
-    // }
-
     &-list{
-        --spacing:30px;
-        --column:2;
         display: flex;
-        margin-left: calc(-1* var(--spacing));
-    }
-    &-col{
-        margin-left: var(--spacing);
-        //width: calc( (100% / var(--column)) - var(--spacing) );
+        align-items: center;
+        justify-content: space-between;
+        gap:0px 30px;
     }
     &-list2{
-        .banner-item:nth-child(1){
-            margin-bottom: 30px;
-        }
-        .banner-item:nth-child(1) .banner-title{
-            font-size: 24px;
-            font-weight: 400;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0px;    
     }
+
+
+    // &-list2{
+    //     .banner-item:nth-child(1){
+    //         margin-bottom: 30px;
+    //     }
+    //     .banner-item:nth-child(1) .banner-title{
+    //         font-size: 24px;
+    //         font-weight: 400;
+    //     }
+    // }
     &-item{
         position: relative;
         overflow: hidden;
+
         &:hover .banner-image {
             transform: scale(1.1);
         }
@@ -144,10 +136,7 @@
 @include maxWidth(1023px){
     .banner-list {
         flex-direction: column;
-        
-    }
-    .banner-col{
-        margin-bottom: 30px;
+        gap: 30px 0;
     }
     .banner-title {
         font-size: 25px;
@@ -158,6 +147,7 @@
     }
     .banner .total-discount-big {
         font-size: 50px;
+        line-height: 42px;
     }
     .banner-countdown-item{
         width: 50px;

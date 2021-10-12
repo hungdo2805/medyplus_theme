@@ -1030,20 +1030,15 @@ dl, ol, ul {
   }
 }
 .banner-list {
-  --spacing:30px;
-  --column:2;
   display: flex;
-  margin-left: calc(-1* var(--spacing));
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px 30px;
 }
-.banner-col {
-  margin-left: var(--spacing);
-}
-.banner-list2 .banner-item:nth-child(1) {
-  margin-bottom: 30px;
-}
-.banner-list2 .banner-item:nth-child(1) .banner-title {
-  font-size: 24px;
-  font-weight: 400;
+.banner-list2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0px;
 }
 .banner-item {
   position: relative;
@@ -1152,10 +1147,7 @@ dl, ol, ul {
 @media screen and (max-width: 1023px) {
   .banner-list {
     flex-direction: column;
-  }
-
-  .banner-col {
-    margin-bottom: 30px;
+    gap: 30px 0;
   }
 
   .banner-title {
@@ -1169,6 +1161,7 @@ dl, ol, ul {
 
   .banner .total-discount-big {
     font-size: 50px;
+    line-height: 42px;
   }
 
   .banner-countdown-item {
