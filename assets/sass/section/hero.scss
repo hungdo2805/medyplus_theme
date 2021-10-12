@@ -237,6 +237,19 @@
 
 @include maxWidth(400px){
 
+    .hero .carousel-control-prev span,
+    .hero .carousel-control-next span{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        background-image: none;
+    }
+    
+    .hero .carousel-control-prev i,
+    .hero .carousel-control-next i {
+        font-size: 8px;
+        line-height: 20px;
+    }
     .hero .carousel-heading {
       font-size: 25px;
     }
