@@ -1426,6 +1426,10 @@ dl, ol, ul {
   .news-list {
     --column:2;
   }
+  .news-image {
+    width: 100%;
+    object-fit: cover;
+  }
 
   .news-title {
     display: inline-block;

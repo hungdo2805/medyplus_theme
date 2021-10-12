@@ -78,6 +78,10 @@
         &-list{
             --column:2;
         }
+        &-image{
+            width: 100%;
+            object-fit: cover;
+        }
     }
     .news-title {
         display: inline-block;
